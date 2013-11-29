@@ -21,3 +21,5 @@
 
 # Textmate project files
 /*.tmproj
+# Ignore application configuration
+/config/application.yml
