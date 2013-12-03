@@ -1,4 +1,21 @@
-<h3>Home</h3>
-<p>Welcome to the home of <%= @owner.name %>.</p>
-<p>I was born on <%= @owner.birthdate %></p>
-<p>Only <%= @owner.countdown %> days until my birthday!</p>
+<% content_for :title do %>Betan<% end %>
+<% content_for :description do %>Website of Betan<% end %>
+<section>
+  <img src="http://images3.wikia.nocookie.net/__cb20130708051814/cardfight/images/7/7b/It-s-over-9000-its-over-9000-29849302-496-370.jpg">
+  <!-- OPPURE ALTERNATIVA <%= image_tag "myphoto.jpg" %> -->
+</section>
+<section>
+  <div class="column">
+    <h2>Stay in touch.</h2>
+  </div>
+  <div class="column">
+    <div class="form-centered">
+      <%= simple_form_for @visitor do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :email, label: false, :placeholder => 'Your email address...' %>
+        </br>
+        <%= f.button :submit, "Sign up for the newsletter", :class => "submit" %>
+      <% end %>
+    </div>
+  </div >
+</section>
